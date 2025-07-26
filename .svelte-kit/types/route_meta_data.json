@@ -1,0 +1,48 @@
+{
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/create-lead": [
+		"src/routes/api/create-lead/+server.ts"
+	],
+	"/api/delete-lead": [
+		"src/routes/api/delete-lead/+server.ts"
+	],
+	"/api/get-lead": [
+		"src/routes/api/get-lead/+server.ts"
+	],
+	"/api/list-leads": [
+		"src/routes/api/list-leads/+server.ts"
+	],
+	"/api/update-lead": [
+		"src/routes/api/update-lead/+server.ts"
+	],
+	"/auth/login": [
+		"src/routes/auth/login/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/auth/logout": [
+		"src/routes/auth/logout/+server.ts"
+	],
+	"/auth/register": [
+		"src/routes/auth/register/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/dashboard": [
+		"src/routes/dashboard/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/dashboard/leads/new": [
+		"src/routes/dashboard/leads/new/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/dashboard/leads/[leadId]/delete": [
+		"src/routes/dashboard/leads/[leadId]/delete/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/dashboard/leads/[leadId]/edit": [
+		"src/routes/dashboard/leads/[leadId]/edit/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	]
+}
