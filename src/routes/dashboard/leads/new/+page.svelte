@@ -13,8 +13,10 @@
 
   const { form, errors, enhance } = superForm(data.form);
   
-  // Define status options
-  const statusOptions = [
+  // Define status options with a type
+  type LeadStatus = 'new' | 'contacted' | 'qualified' | 'converted' | 'lost';
+  
+  const statusOptions: { value: LeadStatus; label: string }[] = [
     { value: 'new', label: 'New' },
     { value: 'contacted', label: 'Contacted' },
     { value: 'qualified', label: 'Qualified' },
@@ -22,10 +24,18 @@
     { value: 'lost', label: 'Lost' }
   ];
   
-  // Handle status change
+  // Handle status change with type safety
   function handleStatusChange(event: Event) {
     const select = event.target as HTMLSelectElement;
-    $form.status = select.value;
+    const selectedValue = select.value as LeadStatus;
+    
+    // Ensure the selected value is a valid status
+    if (statusOptions.some(option => option.value === selectedValue)) {
+      $form.status = selectedValue;
+    } else {
+      // Handle invalid status (shouldn't happen with proper UI constraints)
+      console.error('Invalid status selected:', selectedValue);
+    }
   }
 </script>
 
