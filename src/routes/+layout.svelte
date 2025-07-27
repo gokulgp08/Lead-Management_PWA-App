@@ -22,6 +22,8 @@
   });
 </script>
 
-<main class="min-h-screen bg-background">
-  <slot />
+<main class="min-h-screen bg-background text-foreground">
+  <div class="min-h-screen">
+    <slot />
+  </div>
 </main>
